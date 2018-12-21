@@ -1,11 +1,11 @@
 # Moodle-Brute
-### Features:
+### Features
 Brute force the moodle login page with a known username and a list of potential passwords, work is divided across multiple threads.
 
-### Coming Soon:
-* Allow username lists
-* Display progress better
-* Increase efficiency
+### Coming Soon
+  * Allow username lists
+  * Display progress better
+  * Increase efficiency
 
 ```
     __  ___             ____      ___           __
@@ -20,7 +20,7 @@ usage: moodleBrute [-h] [-v] -u URL -l LOGIN -p PASSWORD [-t THREADS]
 
 Moodle Login Brute Forcer
 
-optional arguments:
+optional arguments
   -h, --help            show this help message and exit
   -v, --version         prints version information
   -u URL, --url URL     the URL to moodle base install
@@ -33,7 +33,7 @@ optional arguments:
   -D DELAY, --delay DELAY
                         request delay (ms). default: 25
 ```
-### Example Usage:
+### Example Usage
 `./moodleBrute.py -u http://target.com -l admin -p passwords`
 
 *Use with responsibility, do not break the law.*

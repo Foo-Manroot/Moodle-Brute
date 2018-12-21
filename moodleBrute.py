@@ -29,7 +29,7 @@ def brute(url, delay, passwords):
 			if loggedin:
 				print(f'(\033[92mSuccess\033[0m): Valid Credentials \"{args.login}\" \"{password}\"')
 			time.sleep(delay/1000)
-		except:
+		except requests.exceptions.RequestException:
 			print('(\033[91mFail\033[0m): Request Error')
 			errors += 1
 	end = time.time()
