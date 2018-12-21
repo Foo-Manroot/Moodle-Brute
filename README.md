@@ -1,4 +1,4 @@
-# Moodle-Brute
+# Moodle-Brute [![Codacy Badge](https://api.codacy.com/project/badge/Grade/274ed0779e444337aff77062bd84eac0)](https://www.codacy.com/app/seymour_sec/Moodle-Brute?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Seymour-Sec/Moodle-Brute&amp;utm_campaign=Badge_Grade)
 ## Features
 Brute force the moodle login page with a known username and a list of potential passwords, work is divided across multiple threads.
 
